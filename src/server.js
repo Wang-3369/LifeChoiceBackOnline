@@ -161,6 +161,20 @@ app.get("/health", (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    ok: true,
+    name: "LifeChoiceBackOnline API",
+    endpoints: [
+      "GET /health",
+      "GET /chat/messages",
+      "POST /chat/messages",
+      "GET /shares",
+      "POST /shares"
+    ]
+  });
+});
+
 app.get("/chat/messages", async (req, res, next) => {
   try {
     const messages = await ChatMessage.find({})
