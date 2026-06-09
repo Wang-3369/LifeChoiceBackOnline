@@ -1,0 +1,20 @@
+{
+  "name": "life-choice-back-online",
+  "version": "1.0.0",
+  "description": "Backend API for LifeChoiceBackOnline chat messages and shared life stories.",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "mongoose": "^8.5.3"
+  }
+}
